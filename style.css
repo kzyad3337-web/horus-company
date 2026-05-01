@@ -213,7 +213,23 @@ nav a:hover {
   line-height: 1.9;
   font-size: 16px;
 }
-
+.services-title {
+    text-align: center;
+    color: #d4af37;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.services-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #d4af37;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
 .director {
   margin-top: 40px;
 }
