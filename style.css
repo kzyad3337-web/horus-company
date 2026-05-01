@@ -629,70 +629,116 @@ i {
    RESPONSIVE FIX (FINAL)
 ========================= */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+  /* منع أي سكرول جانبي */
+  body {
+    overflow-x: hidden;
+  }
 
-    .menu {
-        flex-direction: column;
-        gap: 10px;
-    }
+  /* ================= NAVBAR ================= */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+  }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding: 80px 20px;
-    }
+  .menu {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
 
-    .hero-content {
-        margin: 0;
-        max-width: 100%;
-    }
+  .menu a {
+    font-size: 16px;
+  }
 
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
+  /* ================= LOGO ================= */
+  .logo {
+    justify-content: center;
+    margin: 0;
+  }
 
-    .card {
-        width: 90%;
-    }
+  .logo h1 {
+    font-size: 26px;
+  }
 
-    .footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+  .logo p {
+    font-size: 12px;
+  }
+
+  /* ================= HERO ================= */
+  .hero {
+    padding: 25px 15px;
+    height: auto;
+  }
+
+  .hero-content {
+    margin: 0;
+    max-width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+
+  /* ================= TOP BOXES ================= */
+  .top-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .service-box {
+    width: 45%;
+  }
+
+  /* ================= SERVICES ================= */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  /* ================= CLIENTS ================= */
+  .clients-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* ================= FOOTER ================= */
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .footer-brand,
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1 1 45%;
+    padding: 10px;
+    border-left: none;
+    text-align: center;
+  }
+
 }
 
-@media (max-width: 600px) {
-
-    .logo h1 {
-        font-size: 22px;
-    }
-
-    .logo p {
-        font-size: 12px;
-    }
-
-    .hero h1 {
-        font-size: 22px;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .navbar {
-        padding: 10px;
-    }
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
 }
