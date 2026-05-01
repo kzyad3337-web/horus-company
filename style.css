@@ -215,7 +215,7 @@ nav a:hover {
 }
 .services-title {
     text-align: center;
-    color: #d4af37;
+    color: #gold;
     font-size: 28px;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -226,7 +226,7 @@ nav a:hover {
     display: block;
     width: 60px;
     height: 2px;
-    background: #d4af37;
+    background: #f1d36b;
     margin: 8px auto 0;
     border-radius: 2px;
 }
