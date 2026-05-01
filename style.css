@@ -631,46 +631,46 @@ i {
 
 @media (max-width: 768px) {
 
-  /* منع أي سكرول جانبي */
+  /* ================== منع اللخبطة ================== */
   body {
     overflow-x: hidden;
   }
 
-  /* ================= NAVBAR ================= */
+  /* ================== NAVBAR (فوق) ================== */
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 12px;
-    text-align: center;
+    padding: 10px 15px;
   }
 
-  .menu {
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 10px;
-  }
-
-  .menu a {
-    font-size: 16px;
-  }
-
-  /* ================= LOGO ================= */
   .logo {
-    justify-content: center;
-    margin: 0;
+    flex-direction: row;
+    gap: 6px;
   }
 
   .logo h1 {
-    font-size: 26px;
+    font-size: 18px;
   }
 
   .logo p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
-  /* ================= HERO ================= */
+  .menu {
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 0;
+  }
+
+  .menu a {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  /* ================== HERO ================== */
   .hero {
-    padding: 25px 15px;
+    padding: 20px 15px;
     height: auto;
   }
 
@@ -689,7 +689,7 @@ i {
     font-size: 12px;
   }
 
-  /* ================= TOP BOXES ================= */
+  /* ================== TOP BOXES ================== */
   .top-services {
     display: flex;
     flex-wrap: wrap;
@@ -701,7 +701,7 @@ i {
     width: 45%;
   }
 
-  /* ================= SERVICES ================= */
+  /* ================== SERVICES ================== */
   .services {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -712,7 +712,7 @@ i {
     width: 100%;
   }
 
-  /* ================= CLIENTS ================= */
+  /* ================== CLIENTS ================== */
   .clients-row {
     flex-direction: column;
     align-items: center;
@@ -720,13 +720,13 @@ i {
     text-align: center;
   }
 
-  /* ================= FOOTER ================= */
+  /* ================== FOOTER (تحت) ================== */
   .footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px 12px;
   }
 
   .footer-brand,
@@ -734,9 +734,25 @@ i {
   .footer-center,
   .footer-right {
     flex: 1 1 45%;
-    padding: 10px;
+    padding: 8px;
     border-left: none;
     text-align: center;
+  }
+
+  .footer p {
+    font-size: 11px;
+    margin: 2px 0;
+  }
+
+  .footer h3,
+  .footer h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .footer-brand img {
+    width: 35px;
+    height: 35px;
   }
 
 }
