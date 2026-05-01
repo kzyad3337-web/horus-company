@@ -10,14 +10,10 @@
     --gold: #d4af37;
     --bg: #f5f7fa;
 }
-html {
-    scroll-behavior: smooth;
-}
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    letter-spacing: 0.2px;
+    font-family: Arial, sans-serif;
     background: var(--blue) ;
     color: white;
 }
@@ -25,9 +21,6 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    position: fixed;  
-    width: 100%;
-    z-index: 999;
     align-items: center;
     height: 80px;
     padding: 0 50px;
@@ -113,11 +106,10 @@ nav a:hover {
 }
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   background: url('your-image.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  padding: 0 80px;
 }
 
 .overlay {
@@ -249,8 +241,7 @@ nav a:hover {
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transform: translateY(-10px);
 }
 
 .card img {
@@ -290,11 +281,43 @@ i {
     color: var(--gold);
     margin-right: 8px;
 }
+
+.top-services {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.service-box {
+    width: 160px;
+    height: 120px;
+    background: #021b28;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    text-align: center;
+}
+.service-box i {
+    color: #d4af37;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* النص */
+.service-box p {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
 .footer {
   background-color: #02112a; 
   width: 100%;
   color: white;
-  padding: 80px 100px;
+  padding: 10px 20px;
   display: grid;
   box-sizing: border-box;
   grid-template-columns: repeat(4, 1fr);
@@ -304,8 +327,9 @@ i {
 }
 .footer p {
   color: #cccccc;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 2px 0;
 }
 .footer-left,
 .footer-center,
@@ -328,9 +352,9 @@ i {
 .footer h3,
 .footer h4 {
   color: #d4af37;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .footer-left {
   flex: 1;
@@ -395,6 +419,135 @@ i {
 .footer-right a:hover {
     color: #c19b2e;
 }
+.clients-section {
+    width: 100%;
+    background: #021b28;
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.clients-section h4 {
+    color: #d4af37;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.clients-section p {
+    color: white;
+    font-size: 13px;
+    margin-top: 6px;
+    opacity: 0.8;
+}
+.clients-row {
+    width: 100%;
+    background: #021b28;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* النص + الشنطة */
+.clients-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.clients-item i {
+    color: #d4af37;   /* شنطة ذهبية */
+    font-size: 22px;
+}
+
+.clients-item h5 {
+    color: #d4af37;   /* العنوان ذهبي */
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.clients-item p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.clients-arrow i {
+    color: #d4af37;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.clients-arrow i:hover {
+    transform: translateX(5px);
+}
+.clients-row {
+    width: 100%;
+    background: #021b28;
+    display: flex;
+     gap: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 25px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* الشنطة */
+.bag i {
+    color: #d4af37;
+    font-size: 22px;
+}
+
+/* الخط الذهبي */
+.divider {
+    width: 2px;
+    height: 25px;
+    background: #d4af37;
+    margin: 0 1px;
+}
+
+/* مصر للطيران */
+.airline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.airline i {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+
+.airline-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.airline-text .main {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.airline-text .sub {
+    color: #ffffff;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+/* السهم (أقصى الشمال) */
+.arrow-left i {
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 .contact-btn {
   display: inline-block;
   margin-top: 15px;
@@ -413,8 +566,8 @@ i {
 }
 
 .footer-brand img {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
@@ -476,54 +629,48 @@ i {
    RESPONSIVE FIX (FINAL)
 ========================= */
 
-@media (max-width: 768px) {
-body {
-    overflow-x: hidden;
-}
+@media (max-width: 1024px) {
+
     .navbar {
         flex-direction: column;
         text-align: center;
         gap: 10px;
-        padding: 10px 15px;
     }
 
     .menu {
         flex-direction: column;
         gap: 10px;
-         flex-wrap: wrap;
-        justify-content: center;
     }
 
     .hero {
         flex-direction: column;
         text-align: center;
         height: auto;
-        padding: 100px 20px;
+        padding: 80px 20px;
     }
 
     .hero-content {
-        margin: auto;
-        max-width: 90%;
-          padding: 20px;
+        margin: 0;
+        max-width: 100%;
     }
 
     .services {
         flex-direction: column;
         align-items: center;
-         gap: 20px;
-
     }
 
     .card {
-        width: 70%;
+        width: 90%;
     }
 
     .footer {
         grid-template-columns: 1fr;
         text-align: center;
-         padding: 40px 20px;
-        gap: 20px;
     }
+}
+
+@media (max-width: 600px) {
+
     .logo h1 {
         font-size: 22px;
     }
