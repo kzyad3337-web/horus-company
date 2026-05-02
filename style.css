@@ -180,8 +180,8 @@ nav a:hover {
 .about-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+  align-items:flex-start ;
+  gap: 40px;
   flex-wrap: wrap;
   margin-top: 30px;
 }
@@ -198,7 +198,7 @@ nav a:hover {
 
 .about-section h2 {
   color: #d4af37;
-  font-size: 36px;
+  font-size: 36px; 
   margin-bottom: 25px;
   letter-spacing: 2px;
   position: relative;
@@ -233,16 +233,15 @@ nav a:hover {
 .about-images {
   flex: 1;
   display: flex;
-  flex-direction: column;
   gap: 15px;
+  justify-content: center;
 }
-
 .about-images img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 12px;
+  width: 45%;
+  height: 250px;
   object-fit: cover;
-  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  border: 2px solid rgba(212,175,55,0.3);
   transition: 0.3s;
 }
 about-images img:hover {
