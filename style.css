@@ -177,6 +177,14 @@ nav a:hover {
     gap: 25px;
     flex-wrap: wrap;
 }
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 .about-section {
   padding: 80px 20px;
   background: var(--blue2);
@@ -222,15 +230,23 @@ nav a:hover {
   text-align: left;
 }
 
-.about-img {
+.about-images {
   flex: 1;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.about-img img {
+
+.about-images img {
   width: 100%;
-  max-width: 250px;
-  border-radius: 10px;
+  max-width: 300px;
+  border-radius: 12px;
   object-fit: cover;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  transition: 0.3s;
+}
+about-images img:hover {
+  transform: scale(1.05);
 }
 .services-title {
     text-align: center;
