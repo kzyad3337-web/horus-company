@@ -207,10 +207,11 @@ nav a:hover {
 
 .about-section p {
   color: #f1f0ee;
-  max-width: 850px;
-  margin: 15px auto;
+  max-width: 100px;
+  margin: 10px 0 ;
   line-height: 1.9;
   font-size: 16px;
+  text-align: left;
 }
 .about-container {
   display: flex;
