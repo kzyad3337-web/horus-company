@@ -1,115 +1,79 @@
 
-// ============================
-// SMOOTH SCROLL NAVIGATION
-// ============================
-document.querySelectorAll('.menu a, .footer-right a').forEach(link => {
-  link.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href");
+function reveal(){
 
-    if (targetId.startsWith("#")) {
-      e.preventDefault();
+  let reveals=document.querySelectorAll(".reveal");
 
-      const target = document.querySelector(targetId);
+  reveals.forEach((element)=>{
 
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
+    let windowHeight=window.innerHeight;
+
+    let revealTop=element.getBoundingClientRect().top;
+
+    let revealPoint=100;
+
+    if(revealTop < windowHeight - revealPoint){
+
+      element.classList.add("active");
+
     }
+
   });
+
+}
+
+window.addEventListener("load",()=>{
+
+  document.querySelector(".hero-content").style.opacity="1";
+
+  document.querySelector(".hero-content").style.transform="translateY(0)";
+
 });
 
+window.addEventListener("scroll",reveal);
 
-// ============================
-// NAVBAR SCROLL EFFECT
-// ============================
-const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll",()=>{
 
-window.addEventListener("scroll", () => {
-  if (!navbar) return;
+  const navbar=document.querySelector(".navbar");
 
-  if (window.scrollY > 50) {
-    navbar.style.background = "rgba(3, 24, 42, 0.95)";
-    navbar.style.backdropFilter = "blur(10px)";
-  } else {
-    navbar.style.background = "rgba(0, 0, 0, 0.7)";
+  if(window.scrollY > 50){
+
+    navbar.style.background="#021b28";
+    navbar.style.boxShadow="0 5px 20px rgba(0,0,0,.4)";
+
+  }else{
+
+    navbar.style.background="transparent";
+    navbar.style.boxShadow="none";
+
   }
+
 });
 
+const toggle=document.querySelector(".menu-toggle");
 
-// ============================
-// ACTIVE MENU LINK ON SCROLL
-// ============================
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".menu a");
+const menu=document.querySelector(".menu");
+
+toggle.addEventListener("click",()=>{
+
+  menu.classList.toggle("active");
+
+});
+// Scroll Reveal
+const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
-
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("active");
     }
   });
 });
 
-
-// ============================
-// SCROLL ANIMATION (REVEAL)
-// ============================
-const animatedElements = document.querySelectorAll(".card, .about-section, .hero-content");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.2
+// Navbar blur effect
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
+  nav.style.background = window.scrollY > 50
+    ? "rgba(2,24,42,0.9)"
+    : "rgba(255,255,255,0.06)";
 });
-
-animatedElements.forEach(el => {
-  el.classList.add("hidden");
-  observer.observe(el);
-});
-
-
-// ============================
-// HERO BUTTON ACTION
-// ============================
-const heroBtn = document.querySelector(".btn");
-
-if (heroBtn) {
-  heroBtn.addEventListener("click", () => {
-    const services = document.querySelector("#services");
-
-    if (services) {
-      services.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
-}
-
-
-// ============================
-// FIX WHATSAPP FLOAT BUTTON
-// ============================
-const whatsapp = document.querySelector(".contact-btn");
-
-if (whatsapp) {
-  whatsapp.classList.add("whatsapp-float");
-}
