@@ -2,12 +2,11 @@
   --bg:#03182a;
   --bg2:#021b28;
   --gold:#d4af37;
+  --gold-light:#f7d76d;
   --text:#ffffff;
   --muted:rgba(255,255,255,0.7);
-  --card:rgba(255,255,255,0.05);
 }
 
-/* RESET */
 *{
   margin:0;
   padding:0;
@@ -21,92 +20,127 @@ html{
 body{
   background:var(--bg);
   color:var(--text);
-  font-family:'Segoe UI', sans-serif;
+  font-family:'Segoe UI',sans-serif;
   overflow-x:hidden;
 }
 
-/* IMAGES FIX */
-img{
-  max-width:100%;
-  height:auto;
-  display:block;
-}
+/* ================= MAIN ================= */
 
-/* MAIN */
 .main-container{
   max-width:1400px;
   margin:auto;
-  padding:0 20px;
+  padding:0 25px;
 }
 
 /* ================= NAVBAR ================= */
+
 .navbar{
   position:fixed;
   top:15px;
   left:50%;
   transform:translateX(-50%);
   width:92%;
-  height:80px;
+  height:82px;
 
   display:flex;
   justify-content:space-between;
   align-items:center;
 
-  padding:14px 30px;
+  padding:14px 35px;
 
-  background:rgba(255,255,255,0.06);
-  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(18px);
+
   border:1px solid rgba(212,175,55,0.15);
-  border-radius:18px;
+  border-radius:20px;
 
   z-index:1000;
+
+  box-shadow:0 10px 35px rgba(0,0,0,.35);
 }
+
+/* ================= LOGO ================= */
 
 .logo{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:14px;
 }
 
 .logo img{
   width:70px;
   height:70px;
+  object-fit:contain;
+}
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
 }
 
 .logo h1{
-  font-size:38px;
   color:var(--gold);
+  font-size:38px;
+  font-weight:800;
+  letter-spacing:2px;
 }
 
 .logo p{
-  font-size:14px;
-  color:var(--gold);
+  color:var(--gold-light);
+  font-size:15px;
+  margin-top:-3px;
 }
+
+/* ================= MENU ================= */
 
 .menu{
   display:flex;
-  gap:20px;
+  align-items:center;
+  gap:28px;
 }
 
 .menu a{
   color:#fff;
   text-decoration:none;
   font-size:18px;
-  font-weight:bold;
+  font-weight:600;
+  transition:.3s;
+  position:relative;
+}
+
+.menu a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:0%;
+  height:2px;
+  background:var(--gold);
+  transition:.3s;
 }
 
 .menu a:hover{
   color:var(--gold);
 }
 
+.menu a:hover::after{
+  width:100%;
+}
+
 /* ================= HERO ================= */
+
 .hero{
+  position:relative;
   min-height:100vh;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:50px;
-  padding-top:120px;
+
+  gap:60px;
+
+  padding-top:140px;
+  padding-bottom:60px;
 
   background:
   linear-gradient(rgba(2,20,35,.75),rgba(2,20,35,.75)),
@@ -114,48 +148,124 @@ img{
 
   background-size:cover;
   background-position:center;
+  overflow:hidden;
 }
 
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right,
+  rgba(5,20,40,.88),
+  rgba(5,20,40,.2));
+}
+
+/* ================= HERO CONTENT ================= */
+
 .hero-content{
+  position:relative;
+  z-index:2;
+
   max-width:600px;
-  background:rgba(255,255,255,0.04);
+
+  padding:45px;
+
+  background:rgba(255,255,255,.05);
   backdrop-filter:blur(15px);
-  border:1px solid rgba(212,175,55,0.2);
-  padding:40px;
-  border-radius:25px;
+
+  border:1px solid rgba(212,175,55,.15);
+  border-radius:28px;
+
+  box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
 
 .hero-content h1{
-  font-size:40px;
+  font-size:52px;
+  line-height:1.2;
   color:var(--gold);
+  margin-bottom:15px;
 }
 
 .hero-content p{
-  margin:10px 0;
-  letter-spacing:2px;
+  color:#fff;
+  letter-spacing:1px;
 }
 
 .line{
-  width:50px;
-  height:2px;
-  background:var(--gold);
   display:block;
-  margin:15px 0;
+  width:70px;
+  height:3px;
+  background:var(--gold);
+  border-radius:20px;
+  margin:18px 0;
 }
 
+.desc{
+  color:#ddd;
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* ================= BUTTON ================= */
+
 .btn{
-  margin-top:20px;
-  padding:12px 25px;
+  margin-top:28px;
+
+  padding:14px 30px;
+
   border:none;
+  border-radius:10px;
+
   background:var(--gold);
-  font-weight:bold;
+  color:#000;
+
+  font-size:15px;
+  font-weight:700;
+
   cursor:pointer;
-  border-radius:6px;
+  transition:.35s;
+}
+
+.btn:hover{
+  background:#b8962e;
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(212,175,55,.25);
+}
+
+/* ================= IMAGE BOX ================= */
+
+.image-box{
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:22px;
+
+  border:2px solid rgba(212,175,55,.2);
+
+  box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+  transition:.4s ease;
+}
+
+.image-box:hover{
+  transform:translateY(-10px);
+}
+
+.image-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.image-box.airplane{
+  width:560px;
+  height:360px;
 }
 
 /* ================= ABOUT ================= */
+
 .about-section{
-  padding:60px 7%;
+  padding:90px 7%;
   background:linear-gradient(to right,#021b28,#03182a);
 }
 
@@ -168,144 +278,149 @@ img{
 
 .about-text{
   flex:1;
-  background:rgba(255,255,255,0.04);
-  padding:35px;
-  border-radius:20px;
+
+  padding:40px;
+
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(212,175,55,.12);
+  border-radius:24px;
+
+  box-shadow:0 10px 35px rgba(0,0,0,.3);
 }
 
 .about-text h2{
   color:var(--gold);
-  font-size:40px;
+  font-size:48px;
+  margin-bottom:25px;
+  position:relative;
 }
 
-.about-images{
-  display:flex;
-  gap:20px;
+.about-text h2::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-12px;
+
+  width:85px;
+  height:4px;
+
+  border-radius:10px;
+
+  background:var(--gold);
 }
 
-.image-box{
-  width:280px;
-  height:350px;
-  overflow:hidden;
-  border-radius:18px;
-}
-
-.image-box img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.about-text p{
+  color:#f1f0ee;
+  line-height:1.9;
+  font-size:17px;
+  margin-bottom:18px;
 }
 
 /* ================= SERVICES ================= */
-.top-services{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-}
 
 .service-box{
-  width:160px;
-  height:120px;
+  width:200px;
+  height:150px;
   background:#021b28;
-  border-radius:10px;
+  border-radius:20px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  text-align:center;
-}
-
-/* ================= CLIENTS (BLUE BAR) ================= */
-.clients-row{
-  width:100%;
-  background:#021b28;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:15px;
-  padding:15px;
-  flex-wrap:wrap;
 }
 
 /* ================= FOOTER ================= */
+
 .footer{
-  background:#02112a;
+  width:100%;
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:30px;
-  padding:30px;
+  gap:40px;
+  padding:60px 40px;
+  background:#02112a;
 }
 
 /* ================= WHATSAPP ================= */
+
 .whatsapp-float{
   position:fixed;
   bottom:20px;
   right:20px;
   width:60px;
   height:60px;
-  background:#25D366;
   border-radius:50%;
+  background:#25D366;
+  color:#fff;
   display:flex;
   justify-content:center;
   align-items:center;
-  font-size:28px;
-  color:#fff;
+  font-size:30px;
+  z-index:999;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE (ELITE UPGRADE) ================= */
+
 @media (max-width:768px){
 
-  /* NAV */
   .navbar{
-    flex-direction:column;
+    flex-direction:row;
+    flex-wrap:wrap;
     height:auto;
     gap:10px;
+    padding:15px;
   }
 
   .menu{
-    flex-wrap:wrap;
+    width:100%;
     justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
   }
 
-  /* HERO */
   .hero{
     flex-direction:column;
     text-align:center;
+    padding-top:170px;
+    gap:25px;
   }
 
   .hero-content{
     width:100%;
+    padding:25px;
   }
 
-  /* ABOUT */
+  .hero-content h1{
+    font-size:30px;
+  }
+
+  .image-box.airplane{
+    width:100%;
+    height:220px;
+  }
+
   .about-container{
     flex-direction:column;
   }
 
-  .about-images{
-    flex-direction:column;
-    width:100%;
+  .about-text{
+    text-align:center;
+    padding:25px;
   }
 
-  .image-box{
-    width:100%;
-    height:250px;
+  .about-text h2{
+    font-size:32px;
   }
 
-  /* SERVICES */
   .service-box{
     width:45%;
+    height:120px;
   }
 
-  /* CLIENTS */
-  .clients-row{
-    flex-direction:column;
-  }
-
-  /* FOOTER */
   .footer{
     grid-template-columns:1fr;
     text-align:center;
   }
+
 }
