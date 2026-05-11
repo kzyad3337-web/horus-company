@@ -323,7 +323,7 @@ nav a:hover {
   text-shadow: 0 5px 15px rgba(0,0,0,0.6);
 }
 
-@media(max-width: 991px) {
+
   .about-container {
     flex-direction: column;
   }
@@ -831,163 +831,60 @@ body{
   transform: translateY(-12px) scale(1.02);
   box-shadow: 0 25px 60px rgba(0,0,0,0.5);
 }
+@media (max-width: 768px) {
 
-/* =================================
-   PERFECT MOBILE FIX
-================================= */
-
-@media screen and (max-width:768px){
-
-  html,
-  body{
-    width:100%;
-    overflow-x:hidden;
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
   }
 
-  .main-container{
-    width:100%;
-    padding:0 12px;
+  .hero,
+  .about-container,
+  .top-services,
+  .footer,
+  .navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
   }
 
-  /* ===== NAVBAR ===== */
-
-  .navbar{
-    width:95%;
-    height:70px;
-    padding:10px 15px;
+  .main-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
   }
 
-  .logo img{
-    width:45px;
-    height:45px;
+  .hero-content,
+  .image-box {
+    flex: 1;
+    min-width: 45%;
   }
 
-  .logo h1{
-    font-size:22px;
+  .top-services {
+    overflow-x: auto;
+    flex-wrap: nowrap;
   }
 
-  .logo p{
-    font-size:10px;
+  .service-box {
+    min-width: 180px;
   }
 
-  .menu{
-    gap:10px;
+  .about-container {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
   }
 
-  .menu a{
-    font-size:11px;
-    margin-left:0;
+  .footer {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
   }
 
-  /* ===== HERO ===== */
-
-  .hero{
-    min-height:auto;
-    padding-top:120px;
-    padding-bottom:60px;
-
-    flex-direction:column;
-
-    gap:25px;
-  }
-
-  .hero-content{
-    width:100%;
-    max-width:100%;
-    padding:25px;
-  }
-
-  .hero-content h1{
-    font-size:28px;
-    line-height:1.4;
-  }
-
-  .hero-content p{
-    font-size:13px;
-  }
-
-  /* ===== IMAGES ===== */
-
-  .image-box,
-  .image-box.airplane{
-    width:100%;
-    max-width:100%;
-    height:auto;
-  }
-
-  img{
-    max-width:100%;
-    display:block;
-  }
-
-  /* ===== ABOUT ===== */
-
-  .about-container{
-    flex-direction:column;
-    gap:25px;
-  }
-
-  .about-text{
-    width:100%;
-    padding:25px;
-  }
-
-  .about-text h2{
-    font-size:30px;
-  }
-
-  .about-section p{
-    font-size:15px;
-  }
-
-  .about-images{
-    width:100%;
-    flex-direction:column;
-  }
-
-  /* ===== SERVICES ===== */
-
-  .top-services{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .service-box{
-    width:100%;
-    max-width:320px;
-  }
-
-  /* ===== CLIENTS ===== */
-
-  .clients-row{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-    text-align:center;
-  }
-
-  /* ===== FOOTER ===== */
-
-  .footer{
-    grid-template-columns:1fr;
-    gap:25px;
-    text-align:center;
-  }
-
-  .footer-brand,
-  .footer-left,
-  .footer-center,
-  .footer-right{
-    border:none;
-    padding-left:0;
-    align-items:center;
+  .footer > div {
+    min-width: 220px;
   }
 
 }
-
-
-
-
-
-
-
