@@ -318,109 +318,430 @@ body{
   margin-bottom:18px;
 }
 
+.about-text h3{
+  color:#fff;
+  margin-top:30px;
+  font-size:24px;
+}
+
+.gold-role{
+  color:var(--gold);
+  font-size:14px;
+  letter-spacing:2px;
+}
+
+.about-images{
+  flex:1;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:25px;
+}
+
+.about-images .image-box{
+  width:300px;
+  height:380px;
+  flex-shrink:0;
+}
+
+.office-text{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+
+  color:#fff;
+  font-size:32px;
+  font-weight:700;
+
+  text-shadow:0 5px 15px rgba(0,0,0,.5);
+}
+
 /* ================= SERVICES ================= */
+
+.services-title{
+  text-align:center;
+  color:var(--gold);
+  font-size:42px;
+  margin-top:60px;
+  margin-bottom:40px;
+  letter-spacing:2px;
+}
+
+.top-services{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:22px;
+
+  padding:0 20px 60px;
+}
 
 .service-box{
   width:200px;
   height:150px;
+
   background:#021b28;
+
   border-radius:20px;
+
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+
+  text-align:center;
+
+  border:1px solid rgba(212,175,55,.15);
+
+  transition:.4s ease;
+
+  position:relative;
+  overflow:hidden;
+}
+
+.service-box::before{
+  content:"";
+
+  position:absolute;
+  top:-120%;
+  left:-120%;
+
+  width:220%;
+  height:220%;
+
+  background:linear-gradient(
+    45deg,
+    transparent,
+    rgba(212,175,55,.08),
+    transparent
+  );
+
+  transform:rotate(25deg);
+
+  transition:.8s;
+}
+
+.service-box:hover::before{
+  top:-40%;
+  left:-40%;
+}
+
+.service-box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.service-box i{
+  color:var(--gold);
+  font-size:32px;
+  margin-bottom:14px;
+}
+
+.service-box p{
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.7;
+}
+
+/* ================= CLIENTS ================= */
+
+.clients-section{
+  width:100%;
+  background:#021b28;
+  text-align:center;
+  padding:30px 20px;
+}
+
+.clients-section h4{
+  color:var(--gold);
+  font-size:18px;
+  letter-spacing:2px;
+}
+
+.clients-section p{
+  color:#ddd;
+  margin-top:10px;
+}
+
+.clients-row{
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:22px;
+
+  background:#021b28;
+
+  padding:22px;
+
+  border-top:1px solid rgba(212,175,55,.15);
+}
+
+.clients-item,
+.airline{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.clients-item i,
+.airline i{
+  color:var(--gold);
+  font-size:24px;
+}
+
+.clients-item h5{
+  color:var(--gold);
+  font-size:14px;
+}
+
+.clients-item p{
+  color:#fff;
+  font-size:12px;
+}
+
+/* ===== NEW ARROWS ===== */
+
+.clients-arrow,
+.arrow-left{
+  width:42px;
+  height:42px;
+
+  border:1px solid rgba(212,175,55,.25);
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:rgba(255,255,255,.04);
+
+  transition:.3s ease;
+}
+
+.clients-arrow:hover,
+.arrow-left:hover{
+  background:var(--gold);
+  transform:translateY(-3px);
+}
+
+.clients-arrow:hover i,
+.arrow-left:hover i{
+  color:#03182a;
+}
+
+.clients-arrow i,
+.arrow-left i{
+  color:var(--gold);
+  font-size:18px;
+  transition:.3s;
+}
+
+.divider{
+  width:2px;
+  height:28px;
+  background:var(--gold);
+}
+
+.airline-text{
+  display:flex;
+  flex-direction:column;
+}
+
+.airline-text .main{
+  color:#fff;
+  font-weight:700;
+}
+
+.airline-text .sub{
+  color:#ccc;
+  font-size:11px;
 }
 
 /* ================= FOOTER ================= */
 
 .footer{
   width:100%;
+
   display:grid;
   grid-template-columns:repeat(4,1fr);
+
   gap:40px;
+
   padding:60px 40px;
+
   background:#02112a;
+}
+
+.footer-brand,
+.footer-left,
+.footer-center,
+.footer-right{
+  display:flex;
+  flex-direction:column;
+
+  border-left:1px solid rgba(255,255,255,.1);
+
+  padding-left:25px;
+}
+
+.footer-brand img{
+  width:60px;
+  margin-bottom:14px;
+}
+
+.footer h3,
+.footer h4{
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+.footer p{
+  color:#ccc;
+  line-height:1.8;
+  font-size:14px;
+}
+
+.footer-right a{
+  color:#fff;
+  text-decoration:none;
+  margin-bottom:10px;
+  transition:.3s;
+}
+
+.footer-right a:hover{
+  color:var(--gold);
+}
+
+.contact-btn{
+  display:inline-block;
+
+  margin-top:15px;
+  padding:12px 22px;
+
+  background:var(--gold);
+  color:#000;
+
+  border-radius:8px;
+
+  text-decoration:none;
+  font-weight:700;
+
+  transition:.3s;
+}
+
+.contact-btn:hover{
+  background:#e6c200;
 }
 
 /* ================= WHATSAPP ================= */
 
 .whatsapp-float{
   position:fixed;
+
   bottom:20px;
   right:20px;
+
   width:60px;
   height:60px;
+
   border-radius:50%;
+
   background:#25D366;
   color:#fff;
+
   display:flex;
   justify-content:center;
   align-items:center;
+
   font-size:30px;
+
   z-index:999;
+
+  box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+  transition:.3s;
 }
 
-/* ================= MOBILE (ELITE UPGRADE) ================= */
+.whatsapp-float:hover{
+  transform:scale(1.1);
+  background:#1ebe5d;
+}
+
+/* ================= REVEAL ================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= MOBILE ================= */
 
 @media (max-width:768px){
 
   .navbar{
-    flex-direction:row;
-    flex-wrap:wrap;
+    flex-direction:column;
     height:auto;
-    gap:10px;
-    padding:15px;
+    gap:15px;
+    padding:20px;
   }
 
   .menu{
-    width:100%;
-    justify-content:center;
     flex-wrap:wrap;
-    gap:14px;
+    justify-content:center;
+    gap:18px;
   }
 
   .hero{
     flex-direction:column;
     text-align:center;
-    padding-top:170px;
-    gap:25px;
+    padding-top:180px;
   }
 
   .hero-content{
-    width:100%;
-    padding:25px;
+    max-width:100%;
   }
 
   .hero-content h1{
-    font-size:30px;
+    font-size:38px;
   }
 
   .image-box.airplane{
     width:100%;
-    height:220px;
+    height:250px;
   }
 
   .about-container{
     flex-direction:column;
   }
 
-  .about-text{
-    text-align:center;
-    padding:25px;
+  .about-images{
+    flex-direction:column;
   }
 
-  .about-text h2{
-    font-size:32px;
-  }
-
-  .service-box{
-    width:45%;
-    height:120px;
+  .about-images .image-box{
+    width:100%;
+    max-width:340px;
+    height:320px;
   }
 
   .footer{
     grid-template-columns:1fr;
-    text-align:center;
+  }
+
+  .clients-row{
+    flex-wrap:wrap;
+    gap:14px;
+    padding:18px;
   }
 
 }
