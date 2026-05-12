@@ -445,8 +445,6 @@ body{
   line-height:1.7;
 }
 
-/* ================= CLIENTS ================= */
-
 .clients-section{
   width:100%;
   background:#021b28;
@@ -503,8 +501,6 @@ body{
   font-size:12px;
 }
 
-/* ===== NEW ARROWS ===== */
-
 .clients-arrow,
 .arrow-left{
   width:42px;
@@ -560,9 +556,6 @@ body{
   color:#ccc;
   font-size:11px;
 }
-
-/* ================= FOOTER ================= */
-
 .footer{
   width:100%;
 
@@ -636,9 +629,6 @@ body{
 .contact-btn:hover{
   background:#e6c200;
 }
-
-/* ================= WHATSAPP ================= */
-
 .whatsapp-float{
   position:fixed;
 
@@ -670,9 +660,6 @@ body{
   transform:scale(1.1);
   background:#1ebe5d;
 }
-
-/* ================= REVEAL ================= */
-
 .reveal{
   opacity:0;
   transform:translateY(60px);
@@ -683,8 +670,6 @@ body{
   opacity:1;
   transform:translateY(0);
 }
-
-/* ================= MOBILE ================= */
 
 @media (max-width:768px){
 
