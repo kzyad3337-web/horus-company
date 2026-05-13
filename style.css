@@ -918,12 +918,24 @@ body{
   }
 
   .clients-row{
-    flex-wrap:wrap;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+  .service-inline{
 
-    gap:12px;
+  display:flex;
 
-    padding:18px 10px;
-  }
+  align-items:center;
+
+  gap:8px;
+}
+  .service-icon{
+
+  font-size:20px;
+}
 
   .divider{
     display:none;
@@ -944,6 +956,16 @@ body{
   .airline-text .sub{
     font-size:9px;
   }
+  .mobile-gold-line{
+
+  width:2px;
+
+  height:45px;
+
+  background:#d4af37;
+
+  border-radius:10px;
+}
 
  .footer-brand,
   .footer-right{
