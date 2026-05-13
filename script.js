@@ -47,7 +47,12 @@ toggle.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
 
+menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
 // PARALLAX HERO
 window.addEventListener("scroll", () => {
   const hero = document.querySelector(".hero");
