@@ -656,9 +656,6 @@ body{
   .main-container{
     padding:0 12px;
   }
-
-  /* NAVBAR */
-
   .navbar{
     width:94%;
     height:78px;
@@ -742,8 +739,6 @@ body{
     transform:translateY(0);
 }
 
-  /* HERO */
-
   .hero{
     flex-direction:row;
 
@@ -818,8 +813,6 @@ body{
     height:100%;
     object-fit:cover;
   }
-
-  /* ABOUT */
 
   .about-section{
     padding:25px 0;
@@ -952,108 +945,89 @@ body{
     font-size:9px;
   }
 
+ .footer-brand,
+  .footer-right{
+    display:none;
+  }
+  footer{
 
-  .footer{
     display:flex;
 
-    flex-direction:column;
+    flex-direction:row;
 
-    gap:25px;
+    gap:10px;
 
-    padding:40px 20px;
+    padding:15px;
 
-    text-align:center;
+    align-items:stretch;
   }
+.footer-left,
+  .footer-center{
 
-  .footer-brand,
-  .footer-left,
-  .footer-center,
-  .footer-right{
-    border:none;
+    flex:1;
 
-    padding-left:0;
+    background:#082844;
+
+    border:1px solid rgba(212,175,55,0.35);
+
+    border-radius:18px;
+
+    padding:14px;
+
+    text-align:left;
+  }
+  .footer-left h3,
+  .footer-center h3{
+
+    color:#d4af37;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+    letter-spacing:1px;
+  }
+.footer-left p,
+.footer-center p{
+
+    color:#fff;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+    margin-bottom:6px;
+  }
+ .footer-center i{
+
+    color:#d4af37;
+
+    margin-right:7px;
+  }
+.mobile-connect-btn{
+
+    display:inline-flex;
 
     align-items:center;
-  }
 
-  .footer-brand img{
-    width:55px;
-  }
+    gap:6px;
 
-  .footer h3,
-  .footer h4{
-    font-size:18px;
-  }
+    margin-top:10px;
 
-  .footer p{
+    color:#d4af37;
+
+    text-decoration:none;
+
     font-size:12px;
+
+    font-weight:600;
+  }
+  .mobile-connect-btn span{
+
+    font-size:14px;
   }
 
-  .footer-right a{
-    font-size:13px;
-  }
-
-  .contact-btn{
-    width:100%;
-
-    max-width:220px;
-  }
-.footer-right{
-  display:none;
 }
-.footer{
-  gap:18px;
-}
-
-.footer-left,
-.footer-brand{
-
-  width:100%;
-
-  background:#082844;
-
-  border:1px solid rgba(212,175,55,0.4);
-
-  border-radius:18px;
-
-  padding:20px;
-
-  text-align:left;
-}
-
-.footer-brand h3{
-  color:#d4af37;
-
-  margin-bottom:10px;
-
-  font-size:18px;
-}
-
-.footer-brand p{
-  color:#fff;
-
-  line-height:1.8;
-
-  font-size:14px;
-}
-
-
-.footer-left h3{
-  color:#d4af37;
-
-  margin-bottom:12px;
-
-  font-size:18px;
-}
-
-.footer-left p{
-  color:#fff;
-
-  font-size:14px;
-
-  line-height:1.9;
-}
-
   .whatsapp-float{
     width:52px;
     height:52px;
