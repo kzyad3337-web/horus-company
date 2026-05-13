@@ -949,7 +949,7 @@ body{
   .footer-right{
     display:none;
   }
-  footer{
+  .footer{
  display:grid;
 
     grid-template-columns:1fr 1fr;
@@ -968,7 +968,6 @@ body{
     padding:14px 12px;
     min-width:0;
    position:relative;
-   left:-3px;
   }
     
   .footer-left h3,
