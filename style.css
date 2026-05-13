@@ -698,14 +698,49 @@ body{
   }
 
   .menu{
-    display:none;
+    position:absolute;
+
+    top:85px;
+    right:15px;
+
+    width:220px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:#021b28;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    display:flex;
+    flex-direction:column;
+
+    gap:18px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-15px);
+
+    transition:.35s ease;
+
+    z-index:999;
   }
 
   .menu-toggle{
     display:block;
     color:#fff;
     font-size:26px;
+     cursor:pointer;
+
   }
+  .menu.active{
+    opacity:1;
+    visibility:visible;
+
+    transform:translateY(0);
+}
 
   /* HERO */
 
