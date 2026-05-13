@@ -13,7 +13,6 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.top = e.clientY + "px";
 });
 
-
 // SCROLL REVEAL
 const elements = document.querySelectorAll(".reveal");
 
