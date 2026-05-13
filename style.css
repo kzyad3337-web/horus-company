@@ -882,7 +882,6 @@ body{
     border-radius:16px;
   }
 
-  /* SERVICES */
 
   .services-title{
     font-size:28px;
@@ -912,8 +911,6 @@ body{
     font-size:10px;
     line-height:1.5;
   }
-
-  /* CLIENTS */
 
   .clients-section{
     padding:20px 15px;
@@ -1001,9 +998,7 @@ body{
 
     max-width:220px;
   }
-.footer-center,
-.footer-right,
-.contact-btn{
+.footer-right{
   display:none;
 }
 .footer{
@@ -1043,7 +1038,7 @@ body{
 }
 
 
-.footer-left h4{
+.footer-left h3{
   color:#d4af37;
 
   margin-bottom:12px;
