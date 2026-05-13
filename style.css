@@ -957,21 +957,18 @@ body{
     gap:10px;
 
     padding:14px;
-    transform:translateX(-4px);
   }
    
 .footer-left,
   .footer-center{
-  transform:scale(0.95);
-    background:#03182a;
-
+    background:#082844;
     border:1px solid rgba(212,175,55,0.35);
-
     border-radius:16px;
-
+    transform:scale(0.94);
     padding:14px 12px;
-
     min-width:0;
+   position:relative;
+   left:-3px;
   }
     
   .footer-left h3,
